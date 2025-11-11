@@ -1,0 +1,153 @@
+.patient-setup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.setup-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px var(--shadow);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.setup-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.setup-header h2 {
+  color: var(--avocado-green);
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.setup-header p {
+  color: var(--dark-gray);
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--avocado-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid var(--avocado-light-green);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: var(--light-gray);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--avocado-green);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(86, 130, 3, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-btn {
+  padding: 15px;
+  background: linear-gradient(135deg, var(--avocado-green) 0%, var(--avocado-dark) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .setup-card {
+    padding: 30px 20px;
+  }
+  
+  .setup-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .setup-emoji {
+    font-size: 3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .patient-setup {
+    padding: 10px;
+  }
+  
+  .setup-card {
+    padding: 20px;
+  }
+  
+  .setup-emoji {
+    font-size: 2rem;
+  }
+  
+  .setup-header h2 {
+    font-size: 1.3rem;
+  }
+}
+

@@ -1,0 +1,126 @@
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-user {
+  justify-content: flex-end;
+}
+
+.message-bot {
+  justify-content: flex-start;
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  background: var(--avocado-light-green);
+  order: 2;
+}
+
+.bot-avatar {
+  background: var(--avocado-green);
+  animation: wiggle 3s infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.user-content {
+  background: linear-gradient(135deg, var(--avocado-green) 0%, var(--avocado-dark) 100%);
+  color: var(--white);
+  border-bottom-right-radius: 4px;
+}
+
+.bot-content {
+  background: var(--avocado-flesh);
+  color: var(--dark-gray);
+  border-bottom-left-radius: 4px;
+  border: 1px solid var(--avocado-light-green);
+}
+
+.message-content p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 5px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 80%;
+  }
+  
+  .message-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+  
+  .message-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .message-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .message-content {
+    padding: 8px 12px;
+    max-width: 75%;
+  }
+  
+  .message-content p {
+    font-size: 0.85rem;
+  }
+}
+

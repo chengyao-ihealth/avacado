@@ -1,0 +1,14 @@
+{
+  "name": "avacado",
+  "version": "1.0.0",
+  "description": "Avocado-themed healthcare chatbot app - Pure frontend version",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "install:frontend": "cd frontend && npm install"
+  },
+  "keywords": ["chatbot", "healthcare", "avocado", "react", "vite"],
+  "author": "",
+  "license": "MIT"
+}
