@@ -48,6 +48,16 @@
   color: var(--dark-gray);
   opacity: 0.8;
   font-size: 1rem;
+  line-height: 1.6;
+}
+
+.setup-description {
+  margin-top: 10px;
+}
+
+.setup-description strong {
+  color: var(--avocado-green);
+  font-weight: 600;
 }
 
 .setup-form {
@@ -66,6 +76,30 @@
   color: var(--avocado-dark);
   font-weight: 600;
   font-size: 0.95rem;
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+.optional-section {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.optional-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.optional-hint {
+  font-size: 0.85rem;
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .form-group input,
@@ -92,22 +126,43 @@
   min-height: 80px;
 }
 
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 .submit-btn {
   padding: 15px;
-  background: linear-gradient(135deg, var(--avocado-green) 0%, var(--avocado-dark) 100%);
-  color: var(--white);
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
+  width: 100%;
 }
 
-.submit-btn:hover:not(:disabled) {
+.submit-btn.primary {
+  background: linear-gradient(135deg, var(--avocado-green) 0%, var(--avocado-dark) 100%);
+  color: var(--white);
+}
+
+.submit-btn.primary:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px var(--shadow);
+}
+
+.submit-btn.quick-start {
+  background: var(--avocado-flesh);
+  color: var(--avocado-dark);
+  border: 2px solid var(--avocado-light-green);
+}
+
+.submit-btn.quick-start:hover:not(:disabled) {
+  background: var(--avocado-light-green);
+  transform: translateY(-2px);
 }
 
 .submit-btn:active:not(:disabled) {
@@ -117,6 +172,17 @@
 .submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.setup-hint {
+  text-align: center;
+  color: var(--avocado-dark);
+  font-size: 0.9rem;
+  margin-top: 15px;
+  opacity: 0.8;
+  padding: 10px;
+  background: var(--avocado-flesh);
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -130,6 +196,24 @@
   
   .setup-emoji {
     font-size: 3rem;
+  }
+  
+  .setup-description {
+    font-size: 0.9rem;
+  }
+  
+  .form-actions {
+    gap: 8px;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .setup-hint {
+    font-size: 0.85rem;
+    padding: 8px;
   }
 }
 

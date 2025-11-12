@@ -68,7 +68,10 @@ npm run build
    - GitHub Actions 会自动构建并部署到 GitHub Pages
 
 4. **访问应用**
-   - 访问 `https://your-username.github.io/avacado/`
+   - 访问 `https://你的GitHub用户名.github.io/avacado/`
+   - 例如：如果你的用户名是 `chengyaoshen`，访问地址是 `https://chengyaoshen.github.io/avacado/`
+   - 📌 **重要**：如果仓库名称不是 `avacado`，需要修改 `frontend/vite.config.js` 中的 `base` 路径
+   - 详细说明请查看 [GITHUB_PAGES_URL.md](./GITHUB_PAGES_URL.md)
 
 ### 方法2：手动部署
 
